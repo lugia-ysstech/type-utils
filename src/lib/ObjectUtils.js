@@ -2,7 +2,7 @@
  * Created by liguoxin on 2017/3/6.
  *@flow
  */
-import type { Match } from 'lugia-utils';
+import type { Match } from 'type-utils';
 
 function queryDataByKey<T>(obj: { [ key: string ]: T }, condition: string, match?: Match): Array<T> {
   const result = [];

@@ -4,7 +4,7 @@
  */
 
 
-import type { NumberUtilsMethod, StringUtilsMethod, ObjectUtilsMethod, ArrayUtilsMethod } from 'lugia-utils';
+import type { NumberUtilsMethod, StringUtilsMethod, ObjectUtilsMethod, ArrayUtilsMethod } from 'type-utils';
 
 const NumberUtils: NumberUtilsMethod = require('./NumberUtils');
 const StringUtils: StringUtilsMethod = require('./StringUtils');

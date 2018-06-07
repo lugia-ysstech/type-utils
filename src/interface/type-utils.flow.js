@@ -1,5 +1,5 @@
 
-declare module '@lugia/lugia-utils' {
+declare module '@lugia/type-utils' {
 
   declare type Dir = "left" | "both" | "right";
   declare type PadArg = {

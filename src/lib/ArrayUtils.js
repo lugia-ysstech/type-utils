@@ -4,7 +4,7 @@
  */
 
 
-import type { ArrayUtilsMethod } from 'lugia-utils';
+import type { ArrayUtilsMethod } from 'type-utils';
 
 const ObjectUtils = require('./ObjectUtils');
 

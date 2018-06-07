@@ -2,7 +2,7 @@
  * Created by liguoxin on 2017/3/6.
  * @flow
  */
-import type { PadArg } from 'lugia-utils';
+import type { PadArg } from 'type-utils';
 
 /*
  * 根据方向自动进行字符串补齐操作
