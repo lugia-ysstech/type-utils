@@ -1,0 +1,25 @@
+{
+    "name": "@lugia/lugia-utils",
+    "version": "1.0.1-1",
+    "description": "",
+    "scripts": {
+        "clean": "lugia-complie clean",
+        "build": "lugia-complie build",
+        "dist": "lugia-complie build && lugia-complie publish",
+        "dev": "lugia-complie dev --ig",
+        "test-local": "lugia-complie test",
+        "test": "lugia-complie lint && lugia-complie test",
+        "cov": "lugia-complie cov"
+    },
+    "devDependencies": {
+        "@lugia/lugia-complie": "1.0.0-beta-7",
+        "benchmark": "^2.1.4",
+        "chai": "^4.1.0"
+    },
+    "keywords": [
+        "nm",
+        "nodemanager"
+    ],
+    "author": "yss",
+    "license": "ISC"
+}
