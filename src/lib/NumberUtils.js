@@ -3,7 +3,7 @@
  * @flow
  */
 module.exports = {
-  limit (value: number, min: number, max: number) {
+  limit(value: number, min: number, max: number): number {
     const result = value > min ? value : min;
     return result < max ? result : max;
   },

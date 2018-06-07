@@ -2,6 +2,8 @@
  * Created by liguoxin on 2017/3/9.
  * @flow
  */
+
+
 import type { NumberUtilsMethod, StringUtilsMethod, ObjectUtilsMethod, ArrayUtilsMethod } from 'lugia-utils';
 
 const NumberUtils: NumberUtilsMethod = require('./NumberUtils');

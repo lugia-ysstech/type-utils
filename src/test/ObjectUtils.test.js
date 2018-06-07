@@ -37,7 +37,7 @@ describe('Utils->ObjectUtils', () => {
 
     expect(ObjectUtils.isArray([])).to.be.true;
     expect(ObjectUtils.isArray(new RegExp('11'))).to.be.false;
-    expect(ObjectUtils.isArray(async () => {})).to.be.false;
+    expect(ObjectUtils.isArray(async (): any => {})).to.be.false;
 
   });
   it('isError', () => {
@@ -53,7 +53,7 @@ describe('Utils->ObjectUtils', () => {
 
     expect(ObjectUtils.isError(new Error())).to.be.true;
     expect(ObjectUtils.isError(new RegExp('11'))).to.be.false;
-    expect(ObjectUtils.isError(async () => {})).to.be.false;
+    expect(ObjectUtils.isError(async (): any => {})).to.be.false;
 
   });
 
@@ -83,7 +83,7 @@ describe('Utils->ObjectUtils', () => {
     expect(ObjectUtils.isDate(() => {})).to.be.false;
     expect(ObjectUtils.isDate(new Date())).to.be.true;
     expect(ObjectUtils.isDate(new RegExp('11'))).to.be.false;
-    expect(ObjectUtils.isDate(async () => {})).to.be.false;
+    expect(ObjectUtils.isDate(async (): any => {})).to.be.false;
 
   });
   it('isNumber', () => {
@@ -98,7 +98,7 @@ describe('Utils->ObjectUtils', () => {
     expect(ObjectUtils.isNumber(new Date())).to.be.false;
     expect(ObjectUtils.isNumber(1)).to.be.true;
     expect(ObjectUtils.isNumber(new RegExp('11'))).to.be.false;
-    expect(ObjectUtils.isNumber(async () => {})).to.be.false;
+    expect(ObjectUtils.isNumber(async (): any => {})).to.be.false;
 
   });
   it('isObject', () => {
@@ -113,7 +113,7 @@ describe('Utils->ObjectUtils', () => {
     expect(ObjectUtils.isObject(new Date())).to.be.true;
     expect(ObjectUtils.isObject({})).to.be.true;
     expect(ObjectUtils.isObject(new RegExp('11'))).to.be.true;
-    expect(ObjectUtils.isObject(async () => {})).to.be.false;
+    expect(ObjectUtils.isObject(async (): any => {})).to.be.false;
 
   });
   it('isBoolean', () => {
@@ -128,7 +128,7 @@ describe('Utils->ObjectUtils', () => {
     expect(ObjectUtils.isBoolean(() => {})).to.be.false;
     expect(ObjectUtils.isBoolean(new Date())).to.be.false;
     expect(ObjectUtils.isBoolean(new RegExp('11'))).to.be.false;
-    expect(ObjectUtils.isBoolean(async () => {})).to.be.false;
+    expect(ObjectUtils.isBoolean(async (): any => {})).to.be.false;
 
   });
   it('isRegExp', () => {
@@ -144,7 +144,7 @@ describe('Utils->ObjectUtils', () => {
     expect(ObjectUtils.isRegExp(new Date())).to.be.false;
     expect(ObjectUtils.isRegExp('1')).to.be.false;
     expect(ObjectUtils.isRegExp(new RegExp('11'))).to.be.true;
-    expect(ObjectUtils.isRegExp(async () => {})).to.be.false;
+    expect(ObjectUtils.isRegExp(async (): any => {})).to.be.false;
 
   });
   it('isString', () => {
@@ -159,7 +159,7 @@ describe('Utils->ObjectUtils', () => {
     expect(ObjectUtils.isString(() => {})).to.be.false;
     expect(ObjectUtils.isString(new Date())).to.be.false;
     expect(ObjectUtils.isString(new RegExp('11'))).to.be.false;
-    expect(ObjectUtils.isString(async () => {})).to.be.false;
+    expect(ObjectUtils.isString(async (): any => {})).to.be.false;
   });
   it('isAsyncFunction', () => {
     expect(ObjectUtils.isAsyncFunction(1)).to.be.false;
@@ -173,6 +173,6 @@ describe('Utils->ObjectUtils', () => {
     expect(ObjectUtils.isAsyncFunction(() => {})).to.be.false;
     expect(ObjectUtils.isAsyncFunction(new Date())).to.be.false;
     expect(ObjectUtils.isAsyncFunction(new RegExp('11'))).to.be.false;
-    expect(ObjectUtils.isAsyncFunction(async () => {})).to.be.true;
+    expect(ObjectUtils.isAsyncFunction(async (): any => {})).to.be.true;
   });
 });

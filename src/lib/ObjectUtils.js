@@ -4,7 +4,7 @@
  */
 import type { Match } from 'lugia-utils';
 
-function queryDataByKey<T> (obj: { [key: string]: T }, condition: string, match?: Match): Array<T> {
+function queryDataByKey<T>(obj: { [ key: string ]: T }, condition: string, match?: Match): Array<T> {
   const result = [];
   if (obj == null) {
     return result;
@@ -12,7 +12,7 @@ function queryDataByKey<T> (obj: { [key: string]: T }, condition: string, match?
   if (!condition) {
     return module.exports.values(obj);
   }
-  Object.keys(obj).forEach(key => {
+  Object.keys(obj).forEach((key: string) => {
     if (match && match.match && match.match(key, condition)) {
       result.push(obj[ key ]);
     } else if (key === condition) {
@@ -22,51 +22,61 @@ function queryDataByKey<T> (obj: { [key: string]: T }, condition: string, match?
   return result;
 }
 
-function values (obj: Object): Array<any> {
+function values(obj: Object): Array<any> {
 
   if (!obj) {
     return [];
   }
-  return Object.keys(obj).map(key => {
+  return Object.keys(obj).map((key: string): any => {
     return obj[ key ];
   });
 }
-function isError (obj: any): boolean {
+
+function isError(obj: any): boolean {
   return _isType(obj, 'Error');
 }
-function isArray (obj: any): boolean {
-  return _isType(obj, 'Array');
+
+function isArray(obj: any): boolean {
+  return Array.isArray(obj);
 }
-function isFunction (obj: any): boolean {
+
+function isFunction(obj: any): boolean {
   return _isType(obj, 'Function');
 }
-function isDate (obj: any): boolean {
+
+function isDate(obj: any): boolean {
   return _isType(obj, 'Date');
 }
-function isObject (obj: any): boolean {
+
+function isObject(obj: any): boolean {
   if (!obj) {
     return false;
   }
   return typeof obj === 'object';
 }
-function isNumber (obj: any): boolean {
+
+function isNumber(obj: any): boolean {
   return _isType(obj, 'Number');
 }
-function isBoolean (obj: any): boolean {
+
+function isBoolean(obj: any): boolean {
   return _isType(obj, 'Boolean');
 }
-function isRegExp (obj: any): boolean {
+
+function isRegExp(obj: any): boolean {
   return _isType(obj, 'RegExp');
 }
-function isString (obj: any): boolean {
+
+function isString(obj: any): boolean {
   return _isType(obj, 'String');
 }
-function isAsyncFunction (obj: any): boolean {
+
+function isAsyncFunction(obj: any): boolean {
   return _isType(obj, 'AsyncFunction');
 }
 
-function _isType (obj: any, type: 'AsyncFunction' |
-  'Function' | 'Error' | 'Array' | 'Date' | 'Number' | 'Boolean' | 'RegExp' | 'String') {
+function _isType(obj: any, type: 'AsyncFunction' |
+  'Function' | 'Error' | 'Array' | 'Date' | 'Number' | 'Boolean' | 'RegExp' | 'String'): boolean {
   return Object.prototype.toString.call(obj) === `[object ${type}]`;
 }
 
