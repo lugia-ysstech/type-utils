@@ -1,11 +1,11 @@
 {
     "name": "@lugia/type-utils",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "",
     "scripts": {
         "clean": "lugia-complie clean",
         "build": "lugia-com plie build",
-        "dist": "lugia-complie build && lugia-complie publish",
+        "dist": "lugia-complie build && npm publish ./target --registry=http://192.168.102.79:5001/",
         "dev": "lugia-complie dev --ig",
         "lint": "lugia-complie lint",
         "jest": "jest",
