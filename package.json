@@ -4,7 +4,7 @@
     "description": "类型相关工具",
     "scripts": {
         "clean": "lugia-complie clean",
-        "build": "lugia-com plie build",
+        "build": "lugia-complie build",
         "dist": "lugia-complie build && npm publish ./target --registry=http://192.168.102.79:5001/",
         "dev": "lugia-complie dev --ig",
         "lint": "lugia-complie lint",
