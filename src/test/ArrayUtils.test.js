@@ -6,6 +6,7 @@ const chai = require('chai');
 const { toArray } = require('../lib/ArrayUtils');
 
 const { expect } = chai;
+
 describe('Utils->ArrayUtils', () => {
 
   it('toArray', () => {
@@ -18,6 +19,7 @@ describe('Utils->ArrayUtils', () => {
     expect(toArray('1')).to.eql([ '1' ]);
 
   });
+
 
   it('toArray for arguments', () => {
     function func() {
