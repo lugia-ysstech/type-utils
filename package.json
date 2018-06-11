@@ -1,7 +1,7 @@
 {
     "name": "@lugia/type-utils",
     "version": "1.0.2",
-    "description": "",
+    "description": "类型相关工具",
     "scripts": {
         "clean": "lugia-complie clean",
         "build": "lugia-com plie build",
