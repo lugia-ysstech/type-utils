@@ -17,6 +17,7 @@ describe('Utils->ArrayUtils', () => {
     expect(toArray([ 1, 2 ])).to.eql([ 1, 2 ]);
     expect(toArray([])).to.eql([]);
     expect(toArray('1')).to.eql([ '1' ]);
+    expect(toArray('1000')).to.eql([ '1000' ]);
 
   });
 

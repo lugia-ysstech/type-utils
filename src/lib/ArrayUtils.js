@@ -13,7 +13,13 @@ const Obj: ArrayUtilsMethod = {
     if (value == null) {
       return [];
     }
-    return ObjectUtils.isArray(value) ? value : (value.length != null ? Array.from(value) : Array.of(value));
+    if (ObjectUtils.isArray(value)) {
+      return value;
+    }
+    if (ObjectUtils.isString(value)) {
+      return [ value ];
+    }
+    return value.length != null ? Array.from(value) : Array.of(value);
   },
 };
 module.exports = Obj;
