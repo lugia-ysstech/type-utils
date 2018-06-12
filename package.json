@@ -4,18 +4,16 @@
     "description": "类型相关工具",
     "scripts": {
         "clean": "lugia-complie clean",
-        "build": "lugia-complie build",
-        "dist": "lugia-complie build && npm publish ./target --registry=http://192.168.102.79:5001/",
-        "dev": "lugia-complie dev --ig",
-        "lint": "lugia-complie lint",
-        "jest": "jest",
-        "test": "lugia-complie lint && jest --watch",
+        "build": "lugia-complie lint && lugia-complie build",
+        "dist": " npm run build && npm publish ./target --registry=http://192.168.102.79:5001/",
+        "test": "lugia-complie lint -w",
         "cov": "lugia-complie cov"
     },
     "devDependencies": {
-        "@lugia/lugia-complie": "1.0.0",
+        "@lugia/lugia-complie": "^1.0.3",
         "benchmark": "^2.1.4",
-        "chai": "^4.1.0"
+        "chai": "^4.1.0",
+        "jest": "^23.1.0"
     },
     "keywords": [
         "nm",
@@ -23,9 +21,7 @@
     ],
     "author": "yss",
     "license": "ISC",
-    "dependencies": {
-        "jest": "^23.1.0"
-    },
+    "dependencies": {},
     "jest": {
         "collectCoverageFrom": [
             "src/**/*.{js,jsx,mjs}"
