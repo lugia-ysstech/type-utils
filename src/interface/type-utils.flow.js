@@ -55,12 +55,12 @@ declare module '@lugia/type-utils' {
     isString(obj: any): boolean,
     isAsyncFunction(obj: any): boolean
   |};
-  declare type utils = {|
+  declare type utils = {
     NumberUtils: NumberUtilsMethod,
     StringUtils: StringUtilsMethod,
     ObjectUtils: ObjectUtilsMethod,
     ArrayUtils: ArrayUtilsMethod
-  |};
+  };
 
 
   declare module.exports: utils;

@@ -1,6 +1,6 @@
 {
     "name": "@lugia/type-utils",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "类型相关工具",
     "scripts": {
         "clean": "lugia-complie clean",
