@@ -74,9 +74,12 @@ function isString(obj: any): boolean {
 function isAsyncFunction(obj: any): boolean {
   return _isType(obj, 'AsyncFunction');
 }
+function isPromise(obj: any): boolean {
+  return _isType(obj, 'Promise');
+}
 
 function _isType(obj: any, type: 'AsyncFunction' |
-  'Function' | 'Error' | 'Array' | 'Date' | 'Number' | 'Boolean' | 'RegExp' | 'String'): boolean {
+  'Function' | 'Error' | 'Array' | 'Date' | 'Number' | 'Boolean' | 'RegExp' | 'String' | 'Promise'): boolean {
   return Object.prototype.toString.call(obj) === `[object ${type}]`;
 }
 
@@ -88,6 +91,7 @@ module.exports = {
   isError,
   isDate,
   isObject,
+  isPromise,
   isNumber,
   isBoolean,
   isRegExp,

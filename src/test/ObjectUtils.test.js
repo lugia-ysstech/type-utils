@@ -38,6 +38,8 @@ describe('Utils->ObjectUtils', () => {
     expect(ObjectUtils.isArray([])).to.be.true;
     expect(ObjectUtils.isArray(new RegExp('11'))).to.be.false;
     expect(ObjectUtils.isArray(async (): any => {})).to.be.false;
+    expect(ObjectUtils.isArray(Promise.resolve((): number => 100))).to.be.false;
+
 
   });
   it('isError', () => {
@@ -54,6 +56,7 @@ describe('Utils->ObjectUtils', () => {
     expect(ObjectUtils.isError(new Error())).to.be.true;
     expect(ObjectUtils.isError(new RegExp('11'))).to.be.false;
     expect(ObjectUtils.isError(async (): any => {})).to.be.false;
+    expect(ObjectUtils.isError(Promise.resolve((): number => 100))).to.be.false;
 
   });
 
@@ -70,6 +73,7 @@ describe('Utils->ObjectUtils', () => {
     expect(ObjectUtils.isFunction(new Error())).to.be.false;
     expect(ObjectUtils.isFunction(() => {})).to.be.true;
     expect(ObjectUtils.isFunction(new RegExp('11'))).to.be.false;
+    expect(ObjectUtils.isFunction(Promise.resolve((): number => 100))).to.be.false;
   });
   it('isDate', () => {
     expect(ObjectUtils.isDate(1)).to.be.false;
@@ -84,6 +88,7 @@ describe('Utils->ObjectUtils', () => {
     expect(ObjectUtils.isDate(new Date())).to.be.true;
     expect(ObjectUtils.isDate(new RegExp('11'))).to.be.false;
     expect(ObjectUtils.isDate(async (): any => {})).to.be.false;
+    expect(ObjectUtils.isDate(Promise.resolve((): number => 100))).to.be.false;
 
   });
   it('isNumber', () => {
@@ -99,6 +104,7 @@ describe('Utils->ObjectUtils', () => {
     expect(ObjectUtils.isNumber(1)).to.be.true;
     expect(ObjectUtils.isNumber(new RegExp('11'))).to.be.false;
     expect(ObjectUtils.isNumber(async (): any => {})).to.be.false;
+    expect(ObjectUtils.isNumber(Promise.resolve((): number => 100))).to.be.false;
 
   });
   it('isObject', () => {
@@ -114,6 +120,7 @@ describe('Utils->ObjectUtils', () => {
     expect(ObjectUtils.isObject({})).to.be.true;
     expect(ObjectUtils.isObject(new RegExp('11'))).to.be.true;
     expect(ObjectUtils.isObject(async (): any => {})).to.be.false;
+    expect(ObjectUtils.isObject(Promise.resolve((): number => 100))).to.be.true;
 
   });
   it('isBoolean', () => {
@@ -129,6 +136,7 @@ describe('Utils->ObjectUtils', () => {
     expect(ObjectUtils.isBoolean(new Date())).to.be.false;
     expect(ObjectUtils.isBoolean(new RegExp('11'))).to.be.false;
     expect(ObjectUtils.isBoolean(async (): any => {})).to.be.false;
+    expect(ObjectUtils.isBoolean(Promise.resolve((): number => 100))).to.be.false;
 
   });
   it('isRegExp', () => {
@@ -145,6 +153,7 @@ describe('Utils->ObjectUtils', () => {
     expect(ObjectUtils.isRegExp('1')).to.be.false;
     expect(ObjectUtils.isRegExp(new RegExp('11'))).to.be.true;
     expect(ObjectUtils.isRegExp(async (): any => {})).to.be.false;
+    expect(ObjectUtils.isRegExp(Promise.resolve((): number => 100))).to.be.false;
 
   });
   it('isString', () => {
@@ -160,6 +169,7 @@ describe('Utils->ObjectUtils', () => {
     expect(ObjectUtils.isString(new Date())).to.be.false;
     expect(ObjectUtils.isString(new RegExp('11'))).to.be.false;
     expect(ObjectUtils.isString(async (): any => {})).to.be.false;
+    expect(ObjectUtils.isString(Promise.resolve((): number => 100))).to.be.false;
   });
   it('isAsyncFunction', () => {
     expect(ObjectUtils.isAsyncFunction(1)).to.be.false;
@@ -174,5 +184,21 @@ describe('Utils->ObjectUtils', () => {
     expect(ObjectUtils.isAsyncFunction(new Date())).to.be.false;
     expect(ObjectUtils.isAsyncFunction(new RegExp('11'))).to.be.false;
     expect(ObjectUtils.isAsyncFunction(async (): any => {})).to.be.true;
+    expect(ObjectUtils.isAsyncFunction(Promise.resolve((): number => 100))).to.be.false;
+  });
+  it('isPromise', () => {
+    expect(ObjectUtils.isPromise(1)).to.be.false;
+    expect(ObjectUtils.isPromise('1')).to.be.false;
+    expect(ObjectUtils.isPromise(false)).to.be.false;
+    expect(ObjectUtils.isPromise(null)).to.be.false;
+    expect(ObjectUtils.isPromise(undefined)).to.be.false;
+    expect(ObjectUtils.isPromise({})).to.be.false;
+    expect(ObjectUtils.isPromise([])).to.be.false;
+    expect(ObjectUtils.isPromise(new Error())).to.be.false;
+    expect(ObjectUtils.isPromise(() => {})).to.be.false;
+    expect(ObjectUtils.isPromise(new Date())).to.be.false;
+    expect(ObjectUtils.isPromise(new RegExp('11'))).to.be.false;
+    expect(ObjectUtils.isPromise(async (): any => {})).to.be.false;
+    expect(ObjectUtils.isPromise(Promise.resolve((): number => 100))).to.be.true;
   });
 });

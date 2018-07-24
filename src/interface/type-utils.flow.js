@@ -51,6 +51,7 @@ declare module '@lugia/type-utils' {
     isFunction(obj: any): boolean,
     isDate(obj: any): boolean,
     isRegExp(obj: any): boolean,
+    isPromise(obj: any): boolean,
     isString(obj: any): boolean,
     isAsyncFunction(obj: any): boolean
   |};
