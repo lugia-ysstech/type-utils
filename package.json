@@ -1,53 +1,59 @@
 {
-    "name": "@lugia/type-utils",
-    "version": "1.0.3",
-    "description": "类型相关工具",
-    "scripts": {
-        "clean": "lugia-complie clean",
-        "build": "lugia-complie lint && lugia-complie build",
-        "dist": " npm run build && npm publish ./target --registry=http://192.168.102.79:5001/",
-        "test": "lugia-complie dev --ig & lugia-complie test --watchAll",
-        "cov": "lugia-complie cov"
-    },
-    "devDependencies": {
-        "@lugia/lugia-complie": "^1.0.3",
-        "benchmark": "^2.1.4",
-        "chai": "^4.1.0",
-        "jest": "^23.1.0"
-    },
-    "keywords": [
-        "nm",
-        "nodemanager"
+  "name": "@lugia/type-utils",
+  "version": "1.0.3",
+  "description": "类型相关工具",
+  "scripts": {
+    "clean": "lugia-complie clean",
+    "build": "lugia-complie lint && lugia-complie build",
+    "dist": " npm run build && npm publish ./target --registry=http://192.168.102.79:5001/",
+    "test": "lugia-complie dev --ig & lugia-complie test --watchAll",
+    "cov": "lugia-complie cov"
+  },
+  "devDependencies": {
+    "@lugia/lugia-complie": "^1.0.4",
+    "babel-preset-react-app": "^3.1.2",
+    "benchmark": "^2.1.4",
+    "chai": "^4.1.0",
+    "jest": "^23.1.0"
+  },
+  "keywords": [
+    "nm",
+    "nodemanager"
+  ],
+  "author": "yss",
+  "license": "ISC",
+  "dependencies": {},
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,mjs}"
     ],
-    "author": "yss",
-    "license": "ISC",
-    "dependencies": {},
-    "jest": {
-        "collectCoverageFrom": [
-            "src/**/*.{js,jsx,mjs}"
-        ],
-        "testMatch": [
-            "<rootDir>/target/test/**/*.{js,jsx,mjs}"
-        ],
-        "testEnvironment": "node",
-        "testURL": "http://localhost",
-        "transform": {
-            "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest"
-        },
-        "transformIgnorePatterns": [
-            "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
-        ],
-        "moduleNameMapper": {
-            "^react-native$": "react-native-web"
-        },
-        "moduleFileExtensions": [
-            "web.js",
-            "js",
-            "json",
-            "web.jsx",
-            "jsx",
-            "node",
-            "mjs"
-        ]
-    }
+    "testMatch": [
+      "<rootDir>/target/test/**/*.{js,jsx,mjs}"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node",
+      "mjs"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  }
 }
