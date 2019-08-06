@@ -1,11 +1,11 @@
 {
   "name": "@lugia/type-utils",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "类型相关工具",
   "scripts": {
     "clean": "lugia-complie clean",
     "build": "lugia-complie lint && lugia-complie build",
-    "dist": " npm run build && npm publish ./target --registry=http://192.168.102.79:5001/",
+    "dist": " npm run build && npm publish ./target --access=public",
     "test": "lugia-complie dev --ig & lugia-complie test --watchAll",
     "cov": "lugia-complie cov"
   },
@@ -14,6 +14,7 @@
     "babel-preset-react-app": "^3.1.2",
     "benchmark": "^2.1.4",
     "chai": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
     "jest": "^23.1.0"
   },
   "keywords": [
